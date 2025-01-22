@@ -43,10 +43,16 @@
             }
 
             try {
-                // Use a free public API for DNS lookup
-                const response = await fetch(`https://api.ipify.org?format=json`);
+                // Use the 'ip-api' public API to resolve the domain to an IP address
+                const response = await fetch(`https://dns.google/resolve?name=${domain}&type=A`);
                 const data = await response.json();
-                ipAddressElement.innerHTML = `Your public IP: ${data.ip}`;
+
+                // Check if the response contains an IP address
+                if (data.Answer) {
+                    ipAddressElement.innerHTML = `IP Address: ${data.Answer[0].data}`;
+                } else {
+                    ipAddressElement.innerHTML = "Could not resolve the domain.";
+                }
             } catch (error) {
                 ipAddressElement.innerHTML = "Error fetching IP information.";
             }

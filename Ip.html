@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain to IP Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #ip-address {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Domain to IP Address Converter</h1>
+    <input type="text" id="domain" placeholder="Enter domain (e.g., google.com)" required>
+    <button onclick="getIp()">Get IP</button>
+    <div id="ip-address"></div>
+
+    <script>
+        async function getIp() {
+            const domain = document.getElementById("domain").value;
+            const ipAddressElement = document.getElementById("ip-address");
+
+            if (!domain) {
+                ipAddressElement.innerHTML = "Please enter a domain.";
+                return;
+            }
+
+            try {
+                // Use a free public API for DNS lookup
+                const response = await fetch(`https://api.ipify.org?format=json`);
+                const data = await response.json();
+                ipAddressElement.innerHTML = `Your public IP: ${data.ip}`;
+            } catch (error) {
+                ipAddressElement.innerHTML = "Error fetching IP information.";
+            }
+        }
+    </script>
+</body>
+</html>

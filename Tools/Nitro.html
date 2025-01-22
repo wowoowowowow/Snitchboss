@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snitch Discord Nitro Code Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Discord Nitro Code Generator</h1>
+    <p>Enter how many codes you want, and click "Start Generating"!</p>
+  </div>
+
+  <!-- Input and Buttons Section -->
+  <div class="input-section">
+    <label for="code-count">How many Nitro codes?</label>
+    <input type="number" id="code-count" placeholder="Enter number of codes" min="1">
+    <button id="start-btn" onclick="startGenerating()">Start Generating</button>
+    <button id="stop-btn" onclick="stopGenerating()" disabled>Stop Generating</button>
+    <button id="download-btn" onclick="downloadLog()" disabled>Download Log</button>
+  </div>
+
+  <!-- Generated Codes Section -->
+  <div class="result-section">
+    <h2>Generated Nitro Codes:</h2>
+    <ul id="generated-codes-list"></ul>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Nitro Code Generator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

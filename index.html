@@ -8,39 +8,42 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
       line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
     }
 
     header {
-      background: linear-gradient(135deg, #007bff, #00d4ff);
+      background: linear-gradient(135deg, #1f1f1f, #007bff);
       color: white;
-      padding: 1rem 0;
+      padding: 2rem 0;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     nav {
-      margin: 1rem 0;
+      margin-top: 1rem;
     }
 
     nav a {
-      color: white;
+      color: #e0e0e0;
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1.1rem;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #00d4ff;
     }
 
     section {
@@ -49,14 +52,14 @@
       margin: 0 auto;
     }
 
-    .home, .about, .portfolio, .contact {
-      margin-bottom: 2rem;
-    }
-
     h2 {
       text-align: center;
       margin-bottom: 1rem;
-      color: #007bff;
+      color: #00d4ff;
+    }
+
+    .home, .about, .portfolio, .contact {
+      margin-bottom: 2rem;
     }
 
     .portfolio .project {
@@ -66,15 +69,28 @@
     }
 
     .portfolio .project-card {
-      background: white;
+      background: #1f1f1f;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .portfolio .project-card:hover {
+      transform: scale(1.05);
     }
 
     .portfolio .project-card img {
-      max-width: 100%;
-      border-radius: 8px;
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .portfolio .project-card h3 {
+      margin: 1rem;
+      color: #00d4ff;
+    }
+
+    .portfolio .project-card p {
+      margin: 0 1rem 1rem;
     }
 
     .contact form {
@@ -88,8 +104,15 @@
     .contact form input,
     .contact form textarea {
       padding: 0.8rem;
-      border: 1px solid #ccc;
+      border: none;
       border-radius: 5px;
+      background: #1f1f1f;
+      color: #e0e0e0;
+    }
+
+    .contact form input::placeholder,
+    .contact form textarea::placeholder {
+      color: #757575;
     }
 
     .contact form button {
@@ -99,6 +122,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background 0.3s;
     }
 
     .contact form button:hover {
@@ -108,7 +132,17 @@
     footer {
       text-align: center;
       padding: 1rem;
-      background: #333;
+      background: #1f1f1f;
+      color: #757575;
+    }
+
+    footer a {
+      color: #00d4ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
       color: white;
     }
   </style>
@@ -127,26 +161,26 @@
 
   <section id="home" class="home">
     <h2>Welcome</h2>
-    <p>Hello! I'm Snitchboss, a creative entrepreneur from Pakistan who loves building businesses, developing websites, and connecting on Discord. Take a look around and get to know me better!</p>
+    <p>Hi there! I'm <strong>Snitchboss</strong>, a creative entrepreneur from Pakistan. I specialize in building businesses, designing modern websites, and connecting with awesome communities on Discord.</p>
   </section>
 
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>I'm a passionate entrepreneur from Pakistan with a knack for creating unique businesses and innovative websites. I thrive on collaborating with like-minded people, often using Discord to share ideas and build communities.</p>
+    <p>Based in Pakistan, I’m passionate about transforming ideas into impactful businesses and websites. I enjoy collaborating with like-minded individuals on platforms like Discord to create meaningful projects.</p>
   </section>
 
   <section id="portfolio" class="portfolio">
     <h2>My Work</h2>
     <div class="project">
       <div class="project-card">
-        <h3>BizLaunch Pro</h3>
-        <p>A startup toolkit for entrepreneurs to launch businesses effortlessly.</p>
         <img src="https://via.placeholder.com/300" alt="BizLaunch Pro">
+        <h3>BizLaunch Pro</h3>
+        <p>A toolkit designed for entrepreneurs to launch their businesses effortlessly.</p>
       </div>
       <div class="project-card">
-        <h3>TechBuild Website</h3>
-        <p>A responsive website designed for a client to showcase their tech solutions.</p>
         <img src="https://via.placeholder.com/300" alt="TechBuild">
+        <h3>TechBuild Website</h3>
+        <p>A responsive website built for showcasing tech solutions to a global audience.</p>
       </div>
     </div>
   </section>
@@ -159,13 +193,12 @@
       <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p>Email: contact@snitchboss.com</p>
-    <p>Discord: Snitchboss123</p>
+    <p>Email: <a href="mailto:contact@snitchboss.com">contact@snitchboss.com</a></p>
+    <p>Discord: <strong>Snitchboss123</strong></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Snitchboss. All rights reserved.</p>
+    <p>&copy; 2025 <a href="#home">Snitchboss</a>. All rights reserved.</p>
   </footer>
 </body>
-        </html>
-        
+</html>

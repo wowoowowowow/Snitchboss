@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snitchboss</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      margin: 1rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .home, .about, .portfolio, .contact {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #007bff;
+    }
+
+    .portfolio .project {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .portfolio .project-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+
+    .portfolio .project-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact form button {
+      padding: 0.8rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact form button:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Snitchboss</h1>
+    <p>Innovative Entrepreneur & Web Developer</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <h2>Welcome</h2>
+    <p>Hello! I'm Snitchboss, a creative entrepreneur from Pakistan who loves building businesses, developing websites, and connecting on Discord. Take a look around and get to know me better!</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate entrepreneur from Pakistan with a knack for creating unique businesses and innovative websites. I thrive on collaborating with like-minded people, often using Discord to share ideas and build communities.</p>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>My Work</h2>
+    <div class="project">
+      <div class="project-card">
+        <h3>BizLaunch Pro</h3>
+        <p>A startup toolkit for entrepreneurs to launch businesses effortlessly.</p>
+        <img src="https://via.placeholder.com/300" alt="BizLaunch Pro">
+      </div>
+      <div class="project-card">
+        <h3>TechBuild Website</h3>
+        <p>A responsive website designed for a client to showcase their tech solutions.</p>
+        <img src="https://via.placeholder.com/300" alt="TechBuild">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: contact@snitchboss.com</p>
+    <p>Discord: Snitchboss123</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Snitchboss. All rights reserved.</p>
+  </footer>
+</body>
+        </html>
+        
